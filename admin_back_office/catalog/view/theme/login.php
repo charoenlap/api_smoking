@@ -16,10 +16,10 @@
 		<script src="assets/js/main.js"></script>
 		<script src="assets/fontawesome/js/all.js"></script>
 	</head>
-	<body class="text-center">
+	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col card-login">
 					<form class="form-signin mt-4" style="max-width: 330px; margin:0px auto;" action="<?php echo $action;?>" method="POST">
 						<label for="inputEmail" class="sr-only">Username</label>
 						<input type="text" id="inputEmail" name="user" class="form-control mb-4" placeholder="Username" required autofocus>
