@@ -7,9 +7,9 @@
 	    		'id_category' => $id_category
 	    	);
 	    	$result = $this->model('master')->getQuestion($data);
-	    	// echo "<pre>";
-	    	// var_dump($result);
-	    	$this->json($result);
+	    	echo "<pre>";
+	    	var_dump($result);
+	    	// $this->json($result);
 	    	// $this->view('home',$data);
 	    }
 	}
