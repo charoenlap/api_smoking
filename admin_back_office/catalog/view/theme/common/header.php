@@ -3,7 +3,7 @@ if (!isset($_SESSION['id_admin'])) {
   header('location:index.php?route=home/login');
   exit();
 }
-?>
+?> 
 <!DOCTYPE html>
 <html class="no-js css-menubar" lang="en">
 <head>
@@ -29,6 +29,8 @@ if (!isset($_SESSION['id_admin'])) {
   <script src="assets/boostrap_jquery/js/popper.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
   <?php 
   if(isset($script)){
@@ -45,20 +47,19 @@ if (!isset($_SESSION['id_admin'])) {
     <!-- Sidebar -->
     <div class="menu-left" id="sidebar-wrapper">
       <div class="sidebar-heading text-theme text-center">
-        <img src="../uploads/logo/slogo.png" alt="" width="100"></div>
+        <!-- <img src="../uploads/logo/slogo.png" alt="" width="100"> -->
+        <h1>Admin</h1>
+      </div>
       <div class="list-group menu-list list-group-flush">
-        <a href="<?php echo route('home'); ?>" class="list-group-item list-group-item-action"> หน้าหลัก</a>
-        <a href="<?php echo route('lotto'); ?>" class="list-group-item list-group-item-action"> จัดการหวย</a>
-        <a href="<?php echo route('bill'); ?>" class="list-group-item list-group-item-action"> บิลหวยลูกค้า</a>
-        <a href="<?php echo route('deposit'); ?>" class="list-group-item list-group-item-action"> การฝาก</a>
-        <a href="<?php echo route('widthdraw'); ?>" class="list-group-item list-group-item-action"> การถอน</a>
-        <a href="<?php echo route('customer'); ?>" class="list-group-item list-group-item-action"> ลูกค้า</a>
-        <a href="<?php echo route('system'); ?>" class="list-group-item list-group-item-action"> จัดการระบบ</a>
-        <!-- <a href="<?php echo route('customer/home'); ?>" id="customer" class="list-group-item list-group-item-action"> ลูกค้า</a>
-        <a href="<?php echo route('company/home'); ?>" id="company" class="list-group-item list-group-item-action"> บริษัท</a>
-        <a href="<?php echo route('package/home'); ?>" id="package" class="list-group-item list-group-item-action"> แพคเกจ</a>
-        <a href="<?php echo route('payment/home'); ?>" id="payment" class="list-group-item list-group-item-action"> แจ้งชำระเงิน</a> -->
-        <!-- <a href="<?php echo route('blog/home'); ?>" id="blog" class="list-group-item list-group-item-action"> Blog</a> -->
+        <a href="<?php echo route('home'); ?>" class="list-group-item list-group-item-action" id="page-dashboard">หน้าหลัก</a>
+        <a href="<?php echo route('question'); ?>" class="list-group-item list-group-item-action" id="page-question">แบบสอบถาม</a>
+        <a href="<?php echo route('reportQuestion'); ?>" class="list-group-item list-group-item-action" id="page-reportquestion">รายงานผลแบบสอบถาม</a>
+        <!-- <a href="<?php echo route('article'); ?>" class="list-group-item list-group-item-action" id="page-article">บทความ</a> -->
+        <a href="<?php echo route('news'); ?>" class="list-group-item list-group-item-action" id="page-news">ข่าวสาร</a>
+        <!-- <a href="<?php echo route('report'); ?>" class="list-group-item list-group-item-action" id="page-report">รายงาน</a> -->
+        <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาขิก</a>
+        <!-- <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a> -->
+        <a href="<?php echo route('home/logout'); ?>" class="list-group-item list-group-item-action">ออกจากระบบ</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -66,7 +67,7 @@ if (!isset($_SESSION['id_admin'])) {
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white px-3">
         <a id="menu-toggle" href="#" style="color: #999;"><i class="fas fa-bars fa-2x"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -74,9 +75,9 @@ if (!isset($_SESSION['id_admin'])) {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
               <a class="nav-link" href="#">หน้าหลัก </a>
-            </li>
+            </li> -->
             <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Member
