@@ -45,7 +45,7 @@
 								</table>
 							</div>
 							<div class="col-md-12">
-								<button class="btn btn-primary" type="submit">บันทึก</button>
+								<button class="btn btn-primary btn-block" type="submit">บันทึก</button>
 							</div>
 						</form>
 					</div>
