@@ -63,10 +63,13 @@ if (!isset($_SESSION['id_admin'])) {
         <?php } ?>
         <!-- <a href="<?php echo route('report'); ?>" class="list-group-item list-group-item-action" id="page-report">รายงาน</a> -->
         <?php if(in_array(4,$menu)){ ?>
-        <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาชิก</a>
+        <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาชิกที่ใช้งาน APP</a>
         <?php } ?>
         <?php if(in_array(5,$menu)){ ?>
-        <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a>
+        <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มผู้ใช้งาน</a>
+        <?php } ?>
+        <?php if(in_array(6,$menu)){ ?>
+        <a href="<?php echo route('admin'); ?>" class="list-group-item list-group-item-action" id="page-group">ผู้ใช้งาน</a>
         <?php } ?>
         <a href="<?php echo route('home/logout'); ?>" class="list-group-item list-group-item-action">ออกจากระบบ</a>
       </div>
