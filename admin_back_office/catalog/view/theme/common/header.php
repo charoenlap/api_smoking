@@ -63,7 +63,7 @@ if (!isset($_SESSION['id_admin'])) {
         <?php } ?>
         <!-- <a href="<?php echo route('report'); ?>" class="list-group-item list-group-item-action" id="page-report">รายงาน</a> -->
         <?php if(in_array(4,$menu)){ ?>
-        <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาขิก</a>
+        <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาชิก</a>
         <?php } ?>
         <?php if(in_array(5,$menu)){ ?>
         <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a>

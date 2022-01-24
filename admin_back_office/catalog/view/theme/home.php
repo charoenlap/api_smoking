@@ -8,7 +8,7 @@
 		<div class="col-md-3">
 			<div class="card bg-warning">
 				<div class="card-body">
-					<h2 class="text-center text-white"><span class="text-success"></span> 200</h2>
+					<h2 class="text-center text-white"><span class="text-success"></span> <?php echo $member;?></h2>
 					<h4 class="text-center text-white">สมาชิก</h4>
 				</div>
 				<div class="card-footer">
@@ -19,7 +19,7 @@
 		<div class="col-md-3">
 			<div class="card bg-success">
 				<div class="card-body">
-					<h2 class="text-center text-white"><span class="text-success"></span> 10</h2>
+					<h2 class="text-center text-white"><span class="text-success"></span> <?php echo $report;?></h2>
 					<h4 class="text-center text-white">รายงาน</h4>
 				</div>
 				<div class="card-footer">
@@ -30,7 +30,7 @@
 		<div class="col-md-3">
 			<div class="card bg-primary">
 				<div class="card-body">
-					<h2 class="text-center text-white"><span class="text-success"></span> 58</h2>
+					<h2 class="text-center text-white"><span class="text-success"></span> <?php echo $quest;?></h2>
 					<h4 class="text-center text-white">แบบสอบถาม</h4>
 				</div>
 				<div class="card-footer">
