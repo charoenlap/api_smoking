@@ -58,7 +58,7 @@ if (!isset($_SESSION['id_admin'])) {
         <a href="<?php echo route('news'); ?>" class="list-group-item list-group-item-action" id="page-news">ข่าวสาร</a>
         <!-- <a href="<?php echo route('report'); ?>" class="list-group-item list-group-item-action" id="page-report">รายงาน</a> -->
         <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาขิก</a>
-        <!-- <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a> -->
+        <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a>
         <a href="<?php echo route('home/logout'); ?>" class="list-group-item list-group-item-action">ออกจากระบบ</a>
       </div>
     </div>
