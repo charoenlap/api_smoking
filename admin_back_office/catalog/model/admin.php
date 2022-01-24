@@ -91,7 +91,7 @@
 			}
 		}
 		public function del($id=0){
-			$sql = "UPDATE s_admin SET admin_status = '0' WHERE id='".(int)$id."'";
+			$sql = "UPDATE s_admin SET admin_status = '0' WHERE id_admin='".(int)$id."'";
 			$this->query($sql);
 		}
 	}
