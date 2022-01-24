@@ -30,6 +30,9 @@
 	    		$result_login = $admin->login($data_login);
 	    		if($result_login['result']=='success'){
 	    			$this->setSession('id_admin',$result_login['detail']['id_admin']);
+	    			$id_group = $result_login['detail']['id_group'];
+	    			$menu  = $this->model('group')->listMenuID($id_group);
+	    			$this->setSession('menu',$menu);
 	    			redirect('home');
 	    		}else{
 	    			redirect('home/login&result=fail');

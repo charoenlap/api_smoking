@@ -38,6 +38,23 @@
 			}
 			return $result;
 		}
+		public function listMenuID($id_group=0){
+			$result = array(
+				'result' => 'fail'
+			);
+			$sql = "SELECT *,s_menu.id as id FROM s_menu 
+				LEFT JOIN s_take_group ON s_menu.id = s_take_group.id_menu 
+				WHERE s_take_group.id_group = '".(int)$id_group."'
+				ORDER BY s_menu.id ASC";
+			$result_group = $this->query($sql);
+			if($result_group->num_rows > 0){
+				$result = array(
+					'result' 	=> 'success',
+					'detail'	=> $result_group->rows
+				);
+			}
+			return $result;
+		}
 		public function add($data = array()){
 			$name = (isset($data['name'])?$data['name']:'');
 			$name = $this->escape($name);

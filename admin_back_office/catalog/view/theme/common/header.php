@@ -43,7 +43,6 @@ if (!isset($_SESSION['id_admin'])) {
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]--> 
   <div class="d-flex" id="wrapper">
-
     <!-- Sidebar -->
     <div class="menu-left" id="sidebar-wrapper">
       <div class="sidebar-heading text-theme text-center">
@@ -52,13 +51,23 @@ if (!isset($_SESSION['id_admin'])) {
       </div>
       <div class="list-group menu-list list-group-flush">
         <a href="<?php echo route('home'); ?>" class="list-group-item list-group-item-action" id="page-dashboard">หน้าหลัก</a>
+        <?php if(in_array(1,$menu)){ ?>
         <a href="<?php echo route('question'); ?>" class="list-group-item list-group-item-action" id="page-question">แบบสอบถาม</a>
+        <?php } ?>
+        <?php if(in_array(2,$menu)){ ?>
         <a href="<?php echo route('reportQuestion'); ?>" class="list-group-item list-group-item-action" id="page-reportquestion">รายงานผลแบบสอบถาม</a>
+        <?php } ?>
         <!-- <a href="<?php echo route('article'); ?>" class="list-group-item list-group-item-action" id="page-article">บทความ</a> -->
+        <?php if(in_array(3,$menu)){ ?>
         <a href="<?php echo route('news'); ?>" class="list-group-item list-group-item-action" id="page-news">ข่าวสาร</a>
+        <?php } ?>
         <!-- <a href="<?php echo route('report'); ?>" class="list-group-item list-group-item-action" id="page-report">รายงาน</a> -->
+        <?php if(in_array(4,$menu)){ ?>
         <a href="<?php echo route('member'); ?>" class="list-group-item list-group-item-action" id="page-member">สมาขิก</a>
+        <?php } ?>
+        <?php if(in_array(5,$menu)){ ?>
         <a href="<?php echo route('group'); ?>" class="list-group-item list-group-item-action" id="page-group">กลุ่มสมาชิก</a>
+        <?php } ?>
         <a href="<?php echo route('home/logout'); ?>" class="list-group-item list-group-item-action">ออกจากระบบ</a>
       </div>
     </div>

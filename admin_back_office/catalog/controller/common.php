@@ -1,6 +1,14 @@
 <?php 
 	class CommonController extends Controller {
 	    public function header($data=array()) {
+	    	$data = array();
+	    	$data['menu'] = array();
+	    	$menu = $this->getSession('menu');
+	    	if(isset($menu['detail'])){
+		    	foreach($menu['detail'] as $val){
+		    		$data['menu'][] = $val['id'];
+		    	}
+		    }
 	    	$this->render('common/header',$data);
 	    }
 	    public function footer($data=array()){
