@@ -7,6 +7,7 @@
 			$admin_user		= $this->escape($data['admin_user']);
 			$admin_password	= $this->escape($data['admin_password']);
 			$sql = "SELECT * FROM s_admin WHERE admin_user ='".$admin_user."' AND admin_password=MD5('".$admin_password."') AND admin_status=1";
+			// echo $sql;exit();
 			$result_login = $this->query($sql);
 			// echo $result_login->sql;
 			if($result_login->num_rows > 0){
