@@ -38,6 +38,17 @@
 				</div>
 			</div>
 		</div>
+		<div class="col-md-3">
+			<div class="card bg-danger">
+				<div class="card-body">
+					<h2 class="text-center text-white"><span class="text-success"></span> <?php echo $news;?></h2>
+					<h4 class="text-center text-white">ข่าวสาร</h4>
+				</div>
+				<div class="card-footer">
+					<a href="<?php echo route('news'); ?>" class="text-white"> เพิ่มเติม</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	
 </div>

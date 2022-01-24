@@ -15,5 +15,10 @@
 			$result = $this->query('SELECT count(id) as count FROM s_question_category')->row['count'];
 			return $result;
 		}
+		public function countNews($data=array()){
+			$result = 0;
+			$result = $this->query('SELECT count(id) as count FROM s_news')->row['count'];
+			return $result;
+		}
 	}
 ?>

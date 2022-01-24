@@ -7,6 +7,7 @@
 	    		$data['member'] = $this->model('master')->countMember();
 	    		$data['report'] = $this->model('master')->countReport();
 	    		$data['quest'] 	= $this->model('master')->countQuest();
+	    		$data['news'] 	= $this->model('master')->countNews();
 	    		$this->view('home',$data);
 	    	}else{
 	    	 	redirect('home/login');
