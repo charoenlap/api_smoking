@@ -7,9 +7,9 @@
 				</div>
 				<div class="card-body">
 					<div class="row">
-						<div class="col-md-12 text-end mb-3">
+						<!-- <div class="col-md-12 text-end mb-3">
 							<a href="<?php echo route('question/addQuestion&cat_id='.$_GET['cat_id']); ?>" class="btn btn-primary"><i class="fas fa-folder-plus"></i> เพิ่มแบบสอบถาม</a>
-						</div>
+						</div> -->
 						<div class="col-md-12">
 							<table class="table table-bordered table-striped">
 								<thead>
