@@ -29,7 +29,7 @@
 										<td><b>คำถาม :</b> <?php echo $value['title']; ?></td>
 										<td class="text-center">
 											<a href="<?php echo route('question/editQuestion&id='.$value['id'].'&cat_id='.$_GET['cat_id']); ?>" class="btn btn-primary"><i class="fas fa-edit"></i>แก้ไข</a>
-											<a href="<?php echo route('question/del'); ?>" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i> ลบ</a>
+											<!-- <a href="<?php echo route('question/del'); ?>" class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i> ลบ</a> -->
 										</td>
 									</tr>
 									<?php } ?>

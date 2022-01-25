@@ -21,7 +21,7 @@
 									<tr>
 										<th class="align-middle">คำตอบ</th>
 										<th class="align-middle" width="40%">เงื่อนไข</th>
-										<th width="10%" class="text-center"><button class="btn btn-success btn-add"><i class="fas fa-plus-circle"></i></button></th>
+										<th width="10%" class="text-center"><!-- <button class="btn btn-success btn-add"><i class="fas fa-plus-circle"></i></button> --></th>
 									</tr>
 								</thead>
 								<tbody id="form">
@@ -37,7 +37,7 @@
 												<?php } ?>
 											</select>
 										</td>
-										<td class="text-center"><button class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i></button></td>
+										<td class="text-center"><!-- <button class="btn btn-danger btn-del"><i class="fas fa-trash-alt"></i> --></button></td>
 									</tr>
 									<?php } ?>
 								</tbody>
